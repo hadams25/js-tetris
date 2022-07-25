@@ -1,4 +1,4 @@
-class board
+class Board
 {
     constructor(rows, columns, block_size)
     {
