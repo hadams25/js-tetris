@@ -22,4 +22,16 @@ class board
             this.grid[i][row] = 0;
         }
     }
+
+    shift_down(row)
+    {
+        for(let i = 0; i < this.columns; i++)
+        {
+           for(let j = row; j > 1; j--)
+            {
+                this.grid[i][j] = this.grid[i][j-1];
+            }
+        }
+        this.clear_row(0);
+    }
 }
