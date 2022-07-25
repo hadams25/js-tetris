@@ -8,9 +8,25 @@
             html, body{margin:0;padding:0;width:100%;min-height:100vh;overflow-x:hidden;}
             body{background-color:#444;display:flex;flex-direction:column;justify-content:center;align-items:center;}
             canvas{height:80vh;aspect-ratio: 2 / 3;background-color: aqua;}
+            .grid{display: grid;grid-template-columns: 320px 200px;}
+            .right-column{display: flex;flex-direction: column;justify-content: space-between;}
+            .game-board{border: solid 2px;}
+            .play-button{background-color:blueviolet; font-size: 16px; padding: 15px 30px; cursor: pointer;}
         </style>
     </head>
     <body>
-        <canvas></canvas>
+        <div class="grid">
+            <canvas id="board" class="game-board"></canvas>
+            <div class="right-column">
+                <div>
+                    <h1>TETRIS</h1>
+                    <p>Score: <span id="score">0</span></p>
+                    <p>Lines: <span id="lines">0</span></p>
+                    <p>Level: <span id="level">0</span></p>
+                    <canvas id="next" class="next"></canvas>
+                </div>
+                <button onclick="play()" class="play-button">Play</button>
+            </div>
+        </div>
     </body>
 </html>
